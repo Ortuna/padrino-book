@@ -1,7 +1,7 @@
 pages: 
   - 01-00-introduction.md
   - 01-01-motivation.md
-  - 02-basics-and-tools.md
+  - 01-02-basics-and-tools.md
   - 01-03-installing-ruby-with-rbenv.md
   - 01-04-hello-world.md
   - 01-05-conclusion.md
