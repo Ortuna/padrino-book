@@ -17,17 +17,17 @@ First of all we need to install the *padrino gem*. We are using the last stable 
 this book it is version **0.11.2**). Execute this command.
 
 
-{: lang="bash" }
+```bash
     $ gem install padrino
 
-
+```
 This will install all necessary dependencies and gets you ready to start. Now we will generate a fresh new Padrino
 project:
 
 
-{: lang="bash" }
+```bash
     $ padrino generate project hello-world
-
+```
 
 Let's go through each part of this command:
 
@@ -43,7 +43,7 @@ Let's go through each part of this command:
 The console output should look like the following:
 
 
-{: lang="bash" }
+```bash
       create
       create  .gitignore
       create  config.ru
@@ -81,7 +81,7 @@ The console output should look like the following:
     $ cd ./hello-world
     $ bundle
     =================================================================
-
+````
 
 The last line in the console output tells you the next steps you have to perform. Before we start coding our app, we
 need some sort of package management for Ruby gems.
@@ -90,23 +90,23 @@ need some sort of package management for Ruby gems.
 Ruby has a nice package manager called [bundler](http://gembundler.com/ "Bundler") which installs all necessary gems in
 the versions you would like to have for your project. This makes it very easy for other developers to work with your
 project even after years. The [Gemfile](http://gembundler.com/gemfile.html "Gemfile") declares the gems that you want to
-install. Bundler takes the content of the Gemfile and will install every package declared in this file. 
+install. Bundler takes the content of the Gemfile and will install every package declared in this file.
 
 
 To install bundler, execute the following command and check the console output:
 
 
-{: lang="bash" }
+```bash
     $ gem install bundler
         Fetching: bundler-1.3.5.gem (100%)
         Successfully installed bundler-1.3.5
         1 gem installed
-
+```
 
 Now we have everything we need to run the `bundle` command and install our dependencies:
 
 
-{: lang="bash" }
+```bash
     $ cd hello-world
     $ bundle
       Fetching gem metadata from http://rubygems.org/.........
@@ -114,13 +114,13 @@ Now we have everything we need to run the `bundle` command and install our depen
       Using rake ...
       Using ...
       Your bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.
-
+```
 
 Let's open the file `app/app.rb` (think of it as the root controller of your app) and insert the following code before
 the last `end`:
 
 
-{: lang="ruby" }
+```ruby
     module HelloWorld
       class App < Padrino::Application
 
@@ -130,14 +130,14 @@ the last `end`:
 
       end
     end
-
+```
 
 Now run the app with:
 
 
-{: lang="bash" }
+```bash
     $ bundle exec padrino start
-
+```
 
 Instead of writing `start`, we can also use the `s` alias. Now, fire up your browser with the URL
 *http://localhost:3000* and see the `Hello World` Greeting being printed.
@@ -153,7 +153,7 @@ Navigating through the various parts of a project is essential. Thus we will go 
 *hello-world* project. The app consists of the following parts:
 
 
-{: lang="bash" }
+```bash
     |-- Gemfile
     |-- Gemfile.lock
     |-- app
@@ -173,7 +173,7 @@ Navigating through the various parts of a project is essential. Thus we will go 
     |   |-- javascripts
     |   `-- stylesheets
     `-- tmp
-
+```
 
 We will go through each part.
 
@@ -206,5 +206,3 @@ We will go through each part.
 - **public**: Directory where you put static resources like images directory, JavaScript files, and style sheets. You
   can use for your asset packaging sinatra-assetpack or sprockets.
 - **tmp**: This directory holds temporary files for intermediate processing like cache, tests, local mails, etc.
-
-%%/* vim: set ts=2 sw=2 textwidth=120: */

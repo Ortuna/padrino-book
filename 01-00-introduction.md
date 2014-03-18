@@ -7,5 +7,3 @@ Specific Language for quickly creating web apps in Ruby. When writing Sinatra ap
 extra conveniences that Rails offers, this is where Padrino comes in as it provides many of these while still staying
 true to Sinatra's philosophy of being simple and lightweight. In order to understand the mantra of the Padrino webpage:
 "Padrino is a full-stack ruby framework built upon Sinatra" you have to read on.
-
-%%/* vim: set ts=2 sw=2 textwidth=120: */
